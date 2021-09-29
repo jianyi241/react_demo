@@ -1,0 +1,22 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #6495ed;
+  .form-box {
+    width: 380px;
+    padding: 20px 60px;
+    background: #FFFFFF;
+    .form-title {
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 6px;
+      margin-bottom: 15px;
+    }
+    .login-btn {
+      width: 100%;
+    }
+  }
+}

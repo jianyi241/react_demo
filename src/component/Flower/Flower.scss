@@ -1,0 +1,10 @@
+.flower{
+  color: red;
+  cursor: pointer;
+  &:hover{
+    color: green;
+  }
+  &:active{
+    color: blue;
+  }
+}
