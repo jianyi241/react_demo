@@ -1,0 +1,20 @@
+// 多行文字超出显示省略号
+@mixin ellipsisMultiline($number: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $number;
+}
+//文字一行超出显示省略号
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//文字左右对齐
+@mixin bothAlign {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}

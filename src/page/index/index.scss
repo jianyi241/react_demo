@@ -1,8 +1,16 @@
-.search-form {
-  width: 500px;
-}
-
-.search-form .input-text,
-.search-form .input-datepicker {
-  width: 200px;
+.index {
+  padding: 15px;
+  .search-form {
+    width: 500px;
+  }
+  .page-title {
+    font-size: 36px;
+    color: $themeColor;
+    padding: 15px 0;
+    border-bottom: 1px solid $themeColor;
+  }
+  .search-form .input-text,
+  .search-form .input-datepicker {
+    width: 200px;
+  }
 }

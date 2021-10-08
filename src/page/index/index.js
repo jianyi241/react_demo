@@ -6,6 +6,7 @@ import moment from 'moment'
 import 'moment/locale/zh-cn'
 import locale from 'antd/es/locale/zh_CN'
 import { ConfigProvider } from 'antd/es';
+import cartoon from '../../assets/image/cartoon.jpg'
 class Index extends React.Component {
   constructor() {
     super()
@@ -82,6 +83,8 @@ class Index extends React.Component {
   render() {
     return (
       <div className={'index'}>
+        <div className={'page-title'}>首页</div>
+        <img src={cartoon}/>
         <div id={'clack'}>
           <Form className={'search-form'}
                 labelCol={8}
