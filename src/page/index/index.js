@@ -84,7 +84,7 @@ class Index extends React.Component {
     return (
       <div className={'index'}>
         <div className={'page-title'}>首页</div>
-        <img src={cartoon}/>
+        <img src={cartoon} alt='' />
         <div id={'clack'}>
           <Form className={'search-form'}
                 labelCol={8}
