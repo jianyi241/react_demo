@@ -7,6 +7,7 @@ import 'moment/locale/zh-cn'
 import locale from 'antd/es/locale/zh_CN'
 import { ConfigProvider } from 'antd/es';
 import cartoon from '../../assets/image/cartoon.jpg'
+import store from "../../store";
 class Index extends React.Component {
   constructor() {
     super()
@@ -33,6 +34,9 @@ class Index extends React.Component {
   componentDidMount() {
     const params = this.props.history.location.state
     console.log('componentDidMount', params)
+    store.subscribe(() => {
+      this.setState({})
+    })
   }
 
   flowerFunc() {
@@ -80,10 +84,23 @@ class Index extends React.Component {
     console.log('radio change ===> ', e.target.value)
   }
 
+  plusStoreCount() {
+    console.log('++')
+    store.dispatch({type: 'INCREASE'})
+  }
+
+
   render() {
+    const { count } = store.getState()
     return (
       <div className={'index'}>
         <div className={'page-title'}>首页</div>
+        <div>
+          <Button onClick={this.plusStoreCount}>
+            +
+          </Button>
+          <span>{count}</span>
+        </div>
         <img src={cartoon} alt='' />
         <div id={'clack'}>
           <Form className={'search-form'}

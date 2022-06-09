@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
+import { Provider, useStore } from 'react-redux'
 import './index.css';
 import App from './App';
 import 'antd/dist/antd.css'
 import reportWebVitals from './reportWebVitals';
 import './util/test'
-
+import store from './store/index'
 ReactDOM.render(
   // <React.StrictMode>
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   // </React.StrictMode>,
